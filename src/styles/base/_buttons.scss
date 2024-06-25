@@ -1,0 +1,47 @@
+.btn {
+    border: 2px solid $transparent;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    text-decoration: none;
+    height: 41px;
+
+    @include space-xy(padding, $s-8, $s-16);
+
+    &-primary {
+        border-color: $black;
+        background-color: $transparent;
+        color: $black;
+
+        @include btn-before($black, 0px, $s-8, 0, 100%);
+
+        &:hover {
+            background-color: $lime;
+        }
+    }
+
+    &-secondary {
+        border-color: $black;
+        color: $white;
+        background-color: $space;
+        margin-bottom: $s-8;
+
+      //  @include btn-before($black, $s-8);
+        @include btn-before($black, $s-8, 0px, 100%, 0);
+        &:hover {
+            background-color: $transparent;
+            color: $black;
+
+       //     @include btn-before($black, 0);
+        }
+    }
+
+    &-tertiary {
+        border-color: $black;
+        background-color: $lime;
+
+        &:hover {
+            background-color: $transparent;
+        }
+    }
+}

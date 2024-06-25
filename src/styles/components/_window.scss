@@ -1,0 +1,22 @@
+.window {
+    @include border(2px, $black);
+
+    &--white {
+        background-color: $white;
+    }
+}
+
+.window__top {
+    position: relative;
+    padding: $s-12;
+    border-bottom: 2px solid $black;
+}
+
+.window__top__right {
+    position: absolute;
+    right: $s-12;
+}
+
+.window__body {
+    padding: $s-12 $s-12 $s-24;
+}

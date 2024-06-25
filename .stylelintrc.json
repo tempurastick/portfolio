@@ -1,23 +1,252 @@
 {
-  "extends": ["stylelint-config-standard"],
-  "plugins": ["stylelint-order"],
+  "extends": [
+    "stylelint-config-recommended-scss",
+    "stylelint-use-nesting",
+    "stylelint-declaration-strict-value",
+    "stylelint-order",
+    "stylelint-config-rational-order"
+  ],
+  "customSyntax": "postcss-scss",
+  "plugins": [
+    "@isnotdefined/stylelint-plugin",
+    "stylelint-config-rational-order/plugin",
+    "stylelint-declaration-block-no-ignored-properties",
+    "stylelint-declaration-strict-value",
+    "stylelint-high-performance-animation",
+    "stylelint-order",
+    "stylelint-prettier",
+    "stylelint-rem-over-px",
+    "stylelint-selector-tag-no-without-class",
+    "stylelint-use-nesting"
+  ],
   "rules": {
-    "declaration-property-value-no-unknown": true,
-    "no-descending-specificity": null,
-    "order/order": ["custom-properties", "declarations"],
-    "order/properties-alphabetical-order": true,
-    "at-rule-no-unknown": [
+    "at-rule-property-required-list": {
+      "font-face": [
+        "font-family",
+        "font-style",
+        "font-display"
+      ]
+    },
+    "selector-pseudo-class-no-unknown": true,
+    "plugin/declaration-block-no-ignored-properties": true,
+    "plugin/selector-tag-no-without-class": [
+      "a",
+      "abbr",
+      "address",
+      "area",
+      "article",
+      "aside",
+      "audio",
+      "b",
+      "base",
+      "bdi",
+      "bdo",
+      "blockquote",
+      "body",
+      "br",
+      "button",
+      "canvas",
+      "caption",
+      "cite",
+      "code",
+      "col",
+      "colgroup",
+      "data",
+      "datalist",
+      "dd",
+      "del",
+      "details",
+      "dfn",
+      "dialog",
+      "div",
+      "dl",
+      "dt",
+      "em",
+      "embed",
+      "fieldset",
+      "figcaption",
+      "figure",
+      "footer",
+      "form",
+      "h1",
+      "h2",
+      "h3",
+      "h4",
+      "h5",
+      "h6",
+      "head",
+      "header",
+      "hr",
+      "html",
+      "i",
+      "iframe",
+      "img",
+      "input",
+      "ins",
+      "kbd",
+      "label",
+      "legend",
+      "li",
+      "link",
+      "main",
+      "map",
+      "mark",
+      "meta",
+      "meter",
+      "nav",
+      "noscript",
+      "object",
+      "ol",
+      "optgroup",
+      "option",
+      "output",
+      "p",
+      "param",
+      "picture",
+      "pre",
+      "progress",
+      "q",
+      "rp",
+      "rt",
+      "ruby",
+      "s",
+      "samp",
+      "script",
+      "section",
+      "select",
+      "small",
+      "source",
+      "span",
+      "strike",
+      "strong",
+      "style",
+      "sub",
+      "summary",
+      "sup",
+      "svg",
+      "table",
+      "tbody",
+      "td",
+      "template",
+      "textarea",
+      "tfoot",
+      "th",
+      "thead",
+      "time",
+      "title",
+      "tr",
+      "track",
+      "u",
+      "ul",
+      "var",
+      "video",
+      "wbr"
+    ],
+    "declaration-no-important": true,
+    "selector-max-universal": 0,
+    "csstools/use-nesting": "always",
+    "prettier/prettier": true,
+    "scss/no-global-function-names": null,
+    "no-duplicate-selectors": true,
+    "color-hex-length": "long",
+    "color-named": "never",
+    "selector-attribute-quotes": "always",
+    "function-url-quotes": "always",
+    "font-weight-notation": "numeric",
+    "font-family-name-quotes": "always-unless-keyword",
+    "comment-whitespace-inside": "always",
+    "selector-pseudo-element-colon-notation": "double",
+    "rule-empty-line-before": [
+      "always",
+      {
+        "except": "first-nested"
+      }
+    ],
+    "order/properties-order": [],
+    "plugin/rational-order": [
       true,
       {
-        "ignoreAtRules": [
-          "apply",
-          "layer",
-          "responsive",
-          "screen",
-          "tailwind",
-          "variants"
-        ]
+        "border-in-box-model": false,
+        "empty-line-between-groups": false,
+        "severity": "warning"
       }
-    ]
-  }
+    ],
+    "property-disallowed-list": [
+      "background",
+      "zoom",
+      "clip",
+      "user-modify"
+    ],
+    "rem-over-px/rem-over-px": true,
+    "scale-unlimited/declaration-strict-value": [
+      [
+        "color",
+        "background-color",
+        "font-family",
+        "font-weight",
+        "z-index"
+      ],
+      {
+        "disableFix": true,
+        "ignoreValues": {
+          "background-color": [
+            "transparent",
+            "inherit",
+            "initial",
+            "unset"
+          ],
+          "color": [
+            "transparent",
+            "inherit",
+            "initial",
+            "unset"
+          ],
+          "fill": [
+            "currentColor",
+            "transparent",
+            "inherit",
+            "initial",
+            "unset"
+          ],
+          "stroke": [
+            "currentColor",
+            "transparent",
+            "inherit",
+            "initial",
+            "unset"
+          ],
+          "font-family": [
+            "inherit",
+            "initial",
+            "unset"
+          ],
+          "font-weight": [
+            "inherit",
+            "initial",
+            "unset"
+          ],
+          "z-index": [
+            "auto",
+            "inherit",
+            "initial",
+            "unset",
+            "revert",
+            "revert-layer"
+          ]
+        }
+      }
+    ],
+    "scss/at-function-parentheses-space-before": "never",
+    "scss/no-duplicate-dollar-variables": true,
+    "unit-disallowed-list": [
+      "cm",
+      "mm",
+      "Q",
+      "in",
+      "pc",
+      "pt"
+    ],
+    "@isnotdefined/no-obsolete": true
+  },
+  "ignoreDisables": false
 }

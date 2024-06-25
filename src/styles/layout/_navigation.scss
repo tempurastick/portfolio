@@ -1,0 +1,22 @@
+.navigation {
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+.navigation__item {
+
+}
+
+.navigation__item__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: $fw-bold;
+    color: $black;
+
+    @include space-xy(padding, $s-8, $s-16);
+
+    &:first-child {
+        padding-left: 0;
+    }
+}

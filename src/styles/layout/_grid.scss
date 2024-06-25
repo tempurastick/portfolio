@@ -1,0 +1,51 @@
+.grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: $col-gutter;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+
+.grid__col {
+    background-color: white; // TODO: remove later
+    border: 1px solid grey;
+
+    &--1 {
+        flex: calc(8.33% - ($col-gutter/2)) ;
+    }
+
+    &--2 {
+        flex: calc(16.3% - ($col-gutter/2)) ;
+    }
+    &--3 {
+        flex: calc(24.72% - ($col-gutter/2)) ;
+    }
+    &--4 {
+        flex: calc(33.1% - ($col-gutter/2)) ;
+    }
+    &--5 {
+        flex: calc(41.65% - ($col-gutter/2)) ;
+    }
+    &--6 {
+        flex: calc(50% - ($col-gutter/2)) ;
+    }
+    &--7 {
+        flex: calc(58.31% - ($col-gutter/2)) ;
+    }
+    &--8 {
+        flex: calc(66.64% - ($col-gutter/2)) ;
+    }
+    &--9 {
+        flex: calc(74.97% - ($col-gutter/2)) ;
+    }
+    &--10 {
+        flex: calc(83.3% - ($col-gutter/2)) ;
+    }
+    &--11 {
+        flex: calc(91.63% - ($col-gutter/2)) ;
+    }
+    &--12 {
+        flex: 100% 0;
+    }
+}

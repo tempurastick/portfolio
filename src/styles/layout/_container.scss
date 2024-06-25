@@ -1,0 +1,10 @@
+.container-max {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    @include space-xy(padding, $s-16, $s-24);
+}

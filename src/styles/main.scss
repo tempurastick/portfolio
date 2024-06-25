@@ -1,0 +1,26 @@
+//@tailwind base;
+//@tailwind components;
+//@tailwind utilities;
+
+@import 'utilities/normalize';
+
+// base
+@import 'base/variables';
+@import "base/mixins";
+@import 'base/typography';
+@import 'base/media-queries';
+@import "base/buttons";
+
+//components
+@import "components/window";
+
+@import 'layout/grid';
+@import 'layout/container';
+@import "layout/navigation";
+
+@import "utilities/spacing";
+
+// TODO: remove later
+.hide {
+    display: none;
+}

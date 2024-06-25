@@ -1,0 +1,22 @@
+@mixin btn-before($hover-colour, $pos1, $pos2, $size1, $size2) {
+    &:after {
+        z-index: $z-minus;
+        position: absolute;
+        content: "";
+        width: $size1;
+        height: $size1;
+        top: $pos1;
+        left: $pos1;
+        background-color: $hover-colour;
+        transition: 200ms top ease-in-out, 200ms left ease-in-out;
+    }
+
+    &:hover {
+        &:after {
+            width: $size2;
+            height: $size2;
+            top: $pos2;
+            left: $pos2;
+        }
+    }
+}

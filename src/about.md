@@ -1,5 +1,5 @@
 ---
-layout: 'layouts/home.webc'
+layout: 'layouts/home.liquid'
 title: 'Home'
 meta:
   desc:

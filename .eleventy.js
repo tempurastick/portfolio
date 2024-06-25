@@ -51,9 +51,7 @@ module.exports = function (eleventyConfig) {
       output: '_site',
     },
     passthroughFileCopy: true,
-    templateFormats: ['html', 'md', 'webc'],
-    htmlTemplateEngine: 'webc',
-    dataTemplateEngine: 'webc',
-    markdownTemplateEngine: 'webc',
+    templateFormats: ['html', 'md', 'liquid', 'njk'],
+    htmlTemplateEngine: 'liquid',
   };
 };

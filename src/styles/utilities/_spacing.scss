@@ -1,0 +1,32 @@
+
+.mb {
+    @each $name, $size in $spacing {
+        &-#{$name} {
+            margin-bottom: $size;
+        }
+    }
+}
+
+.mt {
+    @each $name, $size in $spacing {
+        &-#{$name} {
+            margin-top: $size;
+        }
+    }
+}
+
+.pb {
+    @each $name, $size in $spacing {
+        &-#{$name} {
+            padding-bottom: $size;
+        }
+    }
+}
+
+.pt {
+    @each $name, $size in $spacing {
+        &-#{$name} {
+            padding-top: $size;
+        }
+    }
+}

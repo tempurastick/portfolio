@@ -17,6 +17,8 @@ $black: #000116;
 $white: #ffffff;
 $transparent: rgba(0,0,0,0);
 
+$shadow: 8px 8px 0 $black;
+
 // borders
 @mixin border($size, $colour) {
     border: $size solid $colour;

@@ -20,3 +20,14 @@
         }
     }
 }
+
+@mixin comic-shadow {
+    box-shadow: $shadow;
+}
+
+@mixin gradient-noise($color) {
+    filter: contrast(5) brightness(2);
+    background:
+            linear-gradient(180deg, $color 0%, $color 65%, $transparent 90%),
+            url(./images/noise.svg);
+}

@@ -1,0 +1,41 @@
+.intro__container {
+  height: 100%;
+}
+
+.intro__grid {
+  box-sizing: border-box;
+  //background-color: $space;
+  background-image: linear-gradient(180deg, $space 0%, $space 55%, $transparent 55%);
+  //height: 45vh;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    z-index: -1;
+    top: 50%;
+    @include gradient-noise($space);
+  }
+}
+
+.intro__img {
+  max-width: 100%;
+}
+
+.intro__box__container {
+  position: relative;
+  z-index: $z-1;
+}
+
+.intro__box {
+  background-color: $white;
+  position: relative;
+  padding: $s-16;
+  margin: auto $s-32 auto 0;
+  height: 150px;
+  @include comic-shadow;
+}
+

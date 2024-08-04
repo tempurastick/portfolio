@@ -44,24 +44,20 @@
             </div>
         </div>
     </div>
-    {% comment %} add pixel sword. change marquee to custom css {% endcomment %}
+    {% comment %} TODO:
+    add pixel sword.
+    change marquee to custom css
+    make it so the pixel sword turns into new cursor. remove pixel sword when cursor taken {% endcomment %}
     <marquee behavior="" direction="right"> Before you continue! Take this: ⚔︎</marquee>
 </div>
-<section class="container about">
-<h2>Skill Check</h2>
-    <div class="grid">
-        <div class="grid__col--3">
-            yaa
-        </div>
-        <div class="grid__col--3">
-            yaa
-        </div>
-        <div class="grid__col--3">
-            yaa
-        </div>
-        <div class="grid__col--3">
-            yaa
-        </div>
+{% include "partials/skills.liquid" %}
+
+<section class="projects__container container-max">
+    <div class="projects__grid">
+        <div class="project__item"></div>
+        <div class="project__item"></div>
+        <div class="project__item"></div>
+        {% comment %}lazy loading{% endcomment %}
     </div>
 </section>
 {% comment %}

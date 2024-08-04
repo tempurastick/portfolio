@@ -1,0 +1,51 @@
+.skills__grid {
+
+}
+
+.skills__item__headline {
+  font-size: $s-24;
+  font-weight: $fw-bold;
+  margin-bottom: $s-8;
+}
+
+.skills__bar {
+  height: $s-24;
+  width: 100%;
+  background-color: $white;
+  border: 2px solid $black;
+  @include comic-shadow;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: inherit;
+  }
+
+  &.skills__bar--80 {
+    &::before {
+      width: 80%;
+      background-color: $space;
+    }
+  }
+
+  &.skills__bar--90 {
+    &::before {
+      width: 90%;
+      background-color: $space;
+    }
+  }
+
+  &.skills__bar--40 {
+    &::before {
+      width: 40%;
+      background-color: $space;
+    }
+  }
+}
+
+.skills__softskills {
+  align-self: center;
+}

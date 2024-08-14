@@ -48,20 +48,16 @@
     add pixel sword.
     change marquee to custom css
     make it so the pixel sword turns into new cursor. remove pixel sword when cursor taken {% endcomment %}
-    <marquee behavior="" direction="right"> Before you continue! Take this: ⚔︎</marquee>
+    <marquee behavior="" direction="right"> Before you continue! Take this: <img src="./images/icons/sword_64.gif" alt="sword icon">︎</marquee>
 </div>
 {% include "partials/skills.liquid" %}
+{% include "partials/projects.liquid" %}
 
-<section class="projects__container container-max">
-    <div class="projects__grid">
-        <div class="project__item"></div>
-        <div class="project__item"></div>
-        <div class="project__item"></div>
-        {% comment %}lazy loading{% endcomment %}
-    </div>
-</section>
+
 {% comment %}
 TODO: add cursor selection tool
+- project as slider / select tool. One cartridge gets loaded at a time
+and more info + links are displayed.
 {% endcomment %}
 <script type="module" src="/main.js"></script>
 </body>

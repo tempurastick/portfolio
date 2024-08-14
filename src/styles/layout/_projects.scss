@@ -1,9 +1,31 @@
 .project__item {
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3/4;
   background-color: $lime;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .projects__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $s-16;
+}
+
+.project__headline {
+  font-size: $s-24;
+  font-weight: $fw-bold;
+  //text-transform: uppercase;
+  margin: 0;
+}
+
+.project__teaser {
   display: flex;
+  flex-direction: row;
+}
+
+.project__inner__spacer {
+  padding: $s-8;
 }

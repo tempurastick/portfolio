@@ -25,6 +25,13 @@
     box-shadow: $shadow;
 }
 
+@mixin box {
+    background-color: $white;
+    padding: $s-16;
+    margin: auto $s-32 auto 0;
+    @include comic-shadow;
+}
+
 @mixin gradient-noise($color) {
     filter: contrast(5) brightness(2);
     background:
